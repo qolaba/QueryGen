@@ -1,0 +1,8 @@
+mistralai
+openai
+dependency-injector
+pydantic
+pymongo
+python-dotenv
+fastapi
+uvicorn
