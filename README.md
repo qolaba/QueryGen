@@ -95,3 +95,27 @@ The operation of this repository revolves around a structured process involving 
    - The process includes a maximum iteration condition to prevent infinite loops. If the number of iterations exceeds the `max_iteration` limit, the process is stopped.
 
 This workflow ensures a robust interaction between the MongoDB database and the LLM, facilitating accurate and secure data handling and query generation.
+
+
+## Setting Up Environment Variables
+
+To ensure the effective operation of the Language Learning Models (LLMs) and the associated API, it is essential to configure several environment variables. These variables facilitate authentication with external services and simplify the configuration of the application. Below are the steps and details for setting up these environment variables:
+
+### Required Environment Variables
+
+- **MISTRALAI_API_KEY**: Needed to authenticate with MistralAI services.
+- **OPENAI_API_KEY**: Required for authentication with OpenAI services.
+- **API_KEY**: Used to authenticate API requests within your FastAPI application.
+
+### Optional Environment Variables
+
+In addition to the essential keys for API authentication, you can also set the following parameters as environment variables to streamline your workflow and avoid the need to specify these parameters manually each time you run the application:
+
+- **CONNECTION_URL**: The MongoDB connection URL.
+- **COLLECTION_LIST**: A list of database collections to be queried.
+- **DATABASE_NAME**: The name of the MongoDB database.
+- **QUERY**: A default query to run when testing or developing.
+
+### Configuring Environment Variables
+
+You can set these environment variables through your operating system's environment settings. Alternatively, for ease of development, you can use a `.env` file placed in the root directory of your project. This file can be loaded using libraries like `dotenv` in Python, which simplifies the management of configuration settings.
