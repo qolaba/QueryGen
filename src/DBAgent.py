@@ -19,11 +19,11 @@ class DBQueryAgent:
 
         return messages
     
-    def convert_dates_in_query(self, query : list[dict]):
+    def convert_dates_in_query(self, query : list[dict]) -> list[dict]:
 
         date_format = "%Y-%m-%d"
 
-        def is_date(string):
+        def is_date(string : str) -> bool:
             check_date = []
             try:
                 datetime.strptime(string, date_format)
@@ -39,7 +39,7 @@ class DBQueryAgent:
             
             return bool(sum(check_date))
 
-        def convert_dates(obj):
+        def convert_dates(obj : dict | list) -> datetime:
             if isinstance(obj, dict):
                 for key, value in obj.items():
                     if isinstance(value, str) and is_date(value):
