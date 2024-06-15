@@ -90,7 +90,7 @@ def prepare_execution_tools(database_type : str = MONGODB) -> dict:
                         },
                         "mongodb_pipeline": {
                             "title": "MongoDb Pipeline",
-                            "description": "The mongodb_pipeline is a list of aggregation commands that will be passed to the MongoDB aggregate function for the specified collection.",
+                            "description": "The mongodb_pipeline is a list of aggregation commands that will be passed to the MongoDB aggregate function for the specified collection. Make sure that, your output must be in proper json format.",
                             "type": "string"
                         },
                         "query_analysis_failed" : {
