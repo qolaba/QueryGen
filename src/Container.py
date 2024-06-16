@@ -8,7 +8,7 @@ from openai import OpenAI
 
 
 class Container(containers.DeclarativeContainer):
-    mongo_client = providers.Singleton(
+    mongo_client = providers.Factory(
         MongoReader
     )
 
